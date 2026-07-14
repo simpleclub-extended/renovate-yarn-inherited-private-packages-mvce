@@ -10,7 +10,7 @@ __metadata:
   resolution: "@simpleclub-extended/foo@workspace:."
   dependencies:
     "@simpleclub-extended/private-lib": "npm:^0.0.1"
-    left-pad: "npm:1.1.0"
+    left-pad: "npm:1.3.0"
   languageName: unknown
   linkType: soft
 
@@ -23,10 +23,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"left-pad@npm:1.1.0":
-  version: 1.1.0
-  resolution: "left-pad@npm:1.1.0"
-  checksum: 10c0/4de9425a88c4e3fe11ebf83c0d0236dfd088ac2efdbf4ecf6500d793958c6a0b81567c563cc2f2e3c16c8d72ae9b28da2b183078c0d558e842a2365fb1283be5
+"left-pad@npm:1.3.0":
+  version: 1.3.0
+  resolution: "left-pad@npm:1.3.0"
+  checksum: 10c0/3fb59c76e281a2f5c810ad71dbbb8eba8b10c6cf94733dc7f27b8c516a5376cacea53543e76f6ae477d866c8954b27f1e15ca349424c2542474eb5bb1d2b6955
   languageName: node
   linkType: hard
 
