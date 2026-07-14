@@ -1,0 +1,22 @@
+{
+  "name": "@simpleclub-extended/private-lib",
+  "version": "0.0.1",
+  "description": "MVCE package for Renovate inherited yarnrc behavior",
+  "main": "index.js",
+  "author": "simpleclub GmbH",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">=20",
+    "yarn": "4.12.0"
+  },
+  "packageManager": "yarn@4.12.0",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "release": "yarn npm publish"
+  }
+}

@@ -1,0 +1,32 @@
+name: Publish private-lib package
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    if: ${{ startsWith(github.event.release.tag_name, 'package-private-lib-v') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: set working directory for the package
+        run: echo "workdir=packages/private-lib" >> $GITHUB_ENV
+      - name: Setup package manager version
+        run: |
+          corepack enable
+          yarn config set npmScopes.simpleclub-extended.npmAuthToken $NPM_AUTH_TOKEN
+          corepack install
+        working-directory: ${{ env.workdir }}
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.GIT_PACKAGES_TOKEN }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "20.x"
+      - name: install dependencies
+        run: |
+          yarn -v
+          yarn install --immutable
+        working-directory: ${{ env.workdir }}
+      - name: publish package
+        run: |
+          yarn release
+        working-directory: ${{ env.workdir }}

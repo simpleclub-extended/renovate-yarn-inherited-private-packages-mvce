@@ -1,0 +1,16 @@
+{
+  "name": "@simpleclub-extended/foo",
+  "version": "0.0.0",
+  "description": "MVCE consumer package for Renovate inherited yarnrc behavior",
+  "main": "index.js",
+  "author": "simpleclub GmbH",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20",
+    "yarn": "4.12.0"
+  },
+  "packageManager": "yarn@4.12.0",
+  "dependencies": {
+    "@simpleclub-extended/private-lib": "0.0.1"
+  }
+}

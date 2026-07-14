@@ -16,12 +16,12 @@ This mirrors the failing path where Renovate must correctly merge inherited Yarn
 
 ## Repo layout
 
-- `packages/private-lib`: package published to GitHub Packages as `@renovate-yarn-inherited-mvce/private-lib`
-- `packages/foo`: consumer package depending on `@renovate-yarn-inherited-mvce/private-lib@0.0.1`
+- `packages/private-lib`: package published to GitHub Packages as `@simpleclub-extended/private-lib`
+- `packages/foo`: consumer package depending on `@simpleclub-extended/private-lib@0.0.1`
 
 ## Publish `private-lib` to GitHub Packages
 
-1. Create GitHub repo under owner `renovate-yarn-inherited-mvce` scope compatibility, or adjust scope names in files.
+1. Create GitHub repo under owner `simpleclub-extended` scope compatibility, or adjust scope names in files.
 2. Push this repo.
 3. Run workflow `Publish private-lib to GitHub Packages` (manual dispatch), or push tag `private-lib-v0.0.1`.
 
@@ -44,7 +44,7 @@ LOG_LEVEL=debug pnpm start -- \
 ## Notes
 
 - For local/private registry access, configure auth for `npm.pkg.github.com` as needed.
-- If your GitHub owner is different, update the scope `renovate-yarn-inherited-mvce` in:
+- If your GitHub owner is different, update the scope `simpleclub-extended` in:
   - `.yarnrc.yml`
   - `packages/private-lib/package.json`
   - `packages/foo/package.json`
